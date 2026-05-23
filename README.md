@@ -15,7 +15,7 @@ so nothing too difficult.
 </p>
 
 
-This Cheat Note is divided on two section:
+This Note is divided on two section:
 1. Config special key bindings
 2. Motions. All the vim motions/operators/keys that I'm using and some not(all taked from this site: [vim.rtorr.com](https://vim.rtorr.com/) and puted into Motions section)
 
