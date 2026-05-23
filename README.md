@@ -14,11 +14,10 @@ so nothing too difficult.
   <h1 align="center">Neovim Sheet Note</h1>
 </p>
 
-This Cheat Sheet is divided on two section:
-1. Config special key bindings
-2. Motions. All the vim motions/operators/keys that I'm using and some not(all taked from this site: [vim.rtorr.com](https://vim.rtorr.com/) and puted into MOTIONS section)
 
-For essential Vim motions, refer to [vim.rtorr.com](https://vim.rtorr.com/).
+This Cheat Note is divided on two section:
+1. Config special key bindings
+2. Motions. All the vim motions/operators/keys that I'm using and some not(all taked from this site: [vim.rtorr.com](https://vim.rtorr.com/) and puted into Motions section)
 
 # Config special key bindings
 
@@ -123,7 +122,7 @@ Leader key = `<Space>`
 | `<Left>`  | `print('skill issue?')` | Disabled arrow key |
 | `<Right>` | `print('skill issue?')` | Disabled arrow key |
 
-# Motions(just table represantation of [Vim Cheat Sheet](https://vim.rtorr.com/) with additional tweaks
+# Motions
 
 ### Global
 
