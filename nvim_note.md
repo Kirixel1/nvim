@@ -1,18 +1,14 @@
 # Neovim Cheat Sheet
 
-Custom shortcuts from `init.lua`.
+This Cheat Sheet is divided on two section:
+1. Config special key bindings
+2. Motions. All the vim motions/operators/keys that I'm using and some not(all taked from this site: [vim.rtorr.com](https://vim.rtorr.com/) and puted into MOTIONS section)
 
 For essential Vim motions, refer to [vim.rtorr.com](https://vim.rtorr.com/).
 
-Also this Cheat Sheet is divided on two section:
-1. Config special key bindings
-2. All the vim motions/operators/keys that I'm using and some not(all taked from this site: [vim.rtorr.com](https://vim.rtorr.com/) and puted into MOTIONS section)
+# Config special key bindings
 
-==========================================================================================================
-                                              CONFIG SPECIAL KEYMAPS BEGIN
-==========================================================================================================
-
-## Leader Keymaps
+### Leader Keymaps
 
 Leader key = `<Space>`
 
@@ -28,7 +24,7 @@ Leader key = `<Space>`
 | `<leader>fb` | `fzf-lua.buffers()`        | List buffers (FZF)                  |
 | `<leader>fh` | `fzf-lua.help_tags()`      | Search help tags (FZF)              |
 
-## Buffer Switching
+### Buffer Switching
 
 | Key        | Action     | Description                                                     |
 | -----      | --------   | -------------                                                   |
@@ -41,7 +37,7 @@ Leader key = `<Space>`
 | `Ctrl+W K` |            | Changes current window split state to up positon                |
 | `Ctrl+W L` |            | Changes current window split state to left positon              |
 
-## Improved Scrolling & Search
+### Improved Scrolling & Search
 
 | Key     | Action    | Description                                |
 | -----   | --------  | -------------                              |
@@ -50,7 +46,7 @@ Leader key = `<Space>`
 | `n`     | `nzzzv`   | Next search result, center, open folds     |
 | `N`     | `Nzzzv`   | Previous search result, center, open folds |
 
-## Window Management
+### Window Management
 
 | Key     | Action                | Description          |
 | -----   | --------              | -------------        |
@@ -63,7 +59,7 @@ Leader key = `<Space>`
 | `<A-k>` | `:resize -6`          | Resize window up     |
 | `<A-l>` | `:vertical resize -9` | Resize window left   |
 
-## Convenience
+### Convenience
 
 | Key                 | Action                            | Description                             |
 | -----               | --------                          | -------------                           |
@@ -75,7 +71,7 @@ Leader key = `<Space>`
 | `<Esc>`             | `:nohlsearch`                     | Clear search highlight                  |
 | `<Esc><Esc>` (term) | `<C-\><C-n>`                      | Terminal: switch to normal mode         |
 
-## LSP Keymaps
+### LSP Keymaps
 
 | Key          | Action                            | Description                     |
 | -----        | --------                          | -------------                   |
@@ -92,7 +88,7 @@ Leader key = `<Space>`
 | `gD`         | `vim.lsp.buf.declaration`         | Go to declaration               |
 | `<leader>q`  | `vim.diagnostic.setqflist`        | Open diagnostic quickfix        |
 
-## Mini.nvim Mappings
+### Mini.nvim Mappings
 
 | Key                       | Mode   | Action                           |
 | -----                     | ------ | --------                         |
@@ -104,7 +100,7 @@ Leader key = `<Space>`
 | `K`                       | Visual | Move selection up (MiniMove)     |
 | `ga + character to align` | Visual | Align text by character to align |
 
-## Miscellaneous
+### Miscellaneous
 
 | Key       | Action                  | Description        |
 | -----     | --------                | -------------      |
@@ -113,15 +109,9 @@ Leader key = `<Space>`
 | `<Left>`  | `print('skill issue?')` | Disabled arrow key |
 | `<Right>` | `print('skill issue?')` | Disabled arrow key |
 
-==========================================================================================================
-                                              CONFIG SPECIAL KEYMAPS END
-==========================================================================================================
+# Motions(just table represantation of [Vim Cheat Sheet](https://vim.rtorr.com/) with additional tweaks
 
-==========================================================================================================
-                                                    VIM MOTIONS BEGIN
-==========================================================================================================
-
-## Global
+### Global
 
 | Key               | Description                         |
 | -----             | -------------                       |
@@ -131,7 +121,7 @@ Leader key = `<Space>`
 | `:ter[minal]`     | open a terminal window              |
 | `K`               | open man page for word under cursor |
 
-## Macros
+### Macros
 
 | Key   | Description          |
 | ----- | -------------        |
@@ -140,7 +130,7 @@ Leader key = `<Space>`
 | `@a`  | run macro a          |
 | `@@`  | rerun last run macro |
 
-## Cursor movement
+### Cursor movement
 
 | Key           | Description                                                           |
 | -----         | -------------                                                         |
@@ -189,7 +179,7 @@ Leader key = `<Space>`
 | `Ctrl+d`      | move cursor and screen down 1/2 page                                  |
 | `Ctrl+u`      | move cursor and screen up 1/2 page                                    |
 
-## Insert mode
+### Insert mode
 
 | Key               | Description                                                  |
 | -----             | -------------                                                |
@@ -211,7 +201,7 @@ Leader key = `<Space>`
 | `Ctrl+ox`         | temporarily enter normal mode to issue one command x         |
 | `Esc` or `Ctrl+c` | exit insert mode                                             |
 
-## Editing
+### Editing
 
 | Key      | Description                                                  |
 | -----    | -------------                                                |
@@ -237,7 +227,7 @@ Leader key = `<Space>`
 | `Ctrl+a` | increases the number                                         |
 | `Ctrl+x` | decreases the number                                         |
 
-## Marking text (visual mode)
+### Marking text (visual mode)
 
 | Key                    | Description                                       |
 | -----                  | -------------                                     |
@@ -256,7 +246,7 @@ Leader key = `<Space>`
 | `Esc` or `Ctrl+c`      | exit visual mode                                  |
 | `Ctrl+v -> g+ctrl+a/x` | Inc/Decr sequence of numbers in visual block mode |
 
-## Visual commands
+### Visual commands
 
 | Key  | Description                           |
 | ---  | -------------                         |
@@ -269,7 +259,7 @@ Leader key = `<Space>`
 | `U`  | change marked text to uppercase       |
 | `gv` | reselect the previously selected text |
 
-## Registers
+### Registers
 
 | Key    | Description                              |
 | -----  | -------------                            |
@@ -279,7 +269,7 @@ Leader key = `<Space>`
 | `"+y`  | yank into the system clipboard register  |
 | `"+p`  | paste from the system clipboard register |
 
-## Marks and positions
+### Marks and positions
 
 | Key        | Description                                        |
 | -----      | -------------                                      |
@@ -299,7 +289,7 @@ Leader key = `<Space>`
 | `g;`       | go to older position in change list                |
 | `Ctrl+]`   | jump to the tag under cursor                       |
 
-## Cut and paste
+### Cut and paste
 
 | Key           | Description                                                         |
 | -----         | -------------                                                       |
@@ -324,7 +314,7 @@ Leader key = `<Space>`
 | `d$`          | delete (cut) to the end of the line                                 |
 | `x`           | delete (cut) character                                              |
 
-## Indent text
+### Indent text
 
 | Key    | Description                                       |
 | -----  | -------------                                     |
@@ -340,7 +330,7 @@ Leader key = `<Space>`
 | `gg=G` | re-indent entire buffer                           |
 | `]p`   | paste and adjust indent to current line           |
 
-## Exiting
+### Exiting
 
 | Key              | Description                               |
 | -----            | -------------                             |
@@ -351,7 +341,7 @@ Leader key = `<Space>`
 | `:q!` or `ZQ`    | quit and throw away unsaved changes       |
 | `:wqa`           | write (save) and quit on all tabs         |
 
-## Search and replace
+### Search and replace
 
 | Key              | Description                                                 |
 | -----            | -------------                                               |
@@ -364,7 +354,7 @@ Leader key = `<Space>`
 | `:%s/old/new/gc` | replace all old with new throughout file with confirmations |
 | `:noh`           | remove highlighting of search matches                       |
 
-## Search in multiple files
+### Search in multiple files
 
 | Key                   | Description                                  |
 | -----                 | -------------                                |
@@ -374,7 +364,7 @@ Leader key = `<Space>`
 | `:cope`               | open a window containing the list of matches |
 | `:ccl`                | close the quickfix window                    |
 
-## Tabs
+### Tabs
 
 | Key              | Description                                           |
 | -----            | -------------                                         |
@@ -388,7 +378,7 @@ Leader key = `<Space>`
 | `:tabo`          | close all tabs except for the current one             |
 | `:tabdo command` | run the command on all tabs                           |
 
-## Working with multiple files
+### Working with multiple files
 
 | Key        | Description                                             |
 | -----      | -------------                                           |
@@ -418,7 +408,7 @@ Leader key = `<Space>`
 | `Ctrl+wJ`  | make current window full width at the very bottom       |
 | `Ctrl+wK`  | make current window full width at the very top          |
 
-## Different
+### Different
 
 | Key                 | Description                                    |
 | -----               | -------------                                  |
@@ -443,7 +433,7 @@ Leader key = `<Space>`
 | `:reg`              | open register contents history                 |
 
 
-## Documentation commands(Mostly multi repeat/search and replace/patterns topics)
+### Documentation commands(Mostly multi repeat/search and replace/patterns topics)
 
 | Topic              | Vim help                   | What it covers                                        |
 | ---------------    | -----------------          | ----------------------------------------------------- |
@@ -460,6 +450,3 @@ Leader key = `<Space>`
 | Flags for `:s`     | `:help :s_flags`           | `g`, `c`, `i`, `I`, `n`, `e`, ...                     |
 | Macros/registers   | `:help registers`          | Recording (`q`), replay (`@`), registers              |
 
-==========================================================================================================
-                                                     VIM MOTIONS END
-==========================================================================================================
