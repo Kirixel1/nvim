@@ -136,12 +136,13 @@ Leader key = `<Space>`
 
 ### Macros
 
-| Key   | Description          |
-| ----- | -------------        |
-| `qa`  | record macro a       |
-| `q`   | stop recording macro |
-| `@a`  | run macro a          |
-| `@@`  | rerun last run macro |
+| Key   | Description            |
+| ----- | -------------          |
+| `qa`  | record macro a         |
+| `q`   | stop recording macro   |
+| `@a`  | run macro a            |
+| `@@`  | rerun last run macro   |
+| `5@q` | repeat macro q 5 times |
 
 ### Cursor movement
 
