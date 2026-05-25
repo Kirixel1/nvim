@@ -69,7 +69,6 @@ vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>', { desc = 'Open netrw built in N
 vim.keymap.set('n', '<leader>it', '<cmd>InspectTree<CR>', { desc = 'Open tree-sitter inspection buffer' })
 vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>', { desc = 'Show keys in the down-right corner' })
 vim.keymap.set('n', '<leader>O', 'o<esc>kO<Esc>j', { desc = 'Add empty lines' })
-vim.keymap.set('n', '<leader>e', function() Snacks.picker.explorer() end, { desc = 'Opens file explorer' })
 vim.keymap.set('n', '<leader>ff', function()
     require('fzf-lua').files({ cwd = vim.fn.expand('%:p:h') })
 end, { desc = 'FZF find files' })
@@ -195,7 +194,7 @@ vim.lsp.config['lua_ls'] = {
     settings = {
         Lua = {
             diagnostics = {
-                globals = { 'vim', 'Snacks', 'MiniIcons' },
+                globals = { 'vim', 'MiniIcons' },
                 disable = { 'inject-field', 'undefined-field', 'missing-fields' },
             },
             runtime = { version = 'LuaJIT' },
@@ -267,7 +266,6 @@ vim.pack.add( {
     'https://github.com/blazkowolf/gruber-darker.nvim',      -- Colorscheme
     'https://github.com/nvim-mini/mini.nvim',                -- A lot of useful small plugins are setting up 15 lines below
     'https://github.com/nvim-lualine/lualine.nvim',          -- Lua status line(path,     lsp status, etc)
-    'https://github.com/folke/snacks.nvim',                  -- File explorer
     'https://github.com/ThePrimeagen/vim-be-good',           -- Small set of games to practice essential Vim motions
     'https://github.com/ibhagwan/fzf-lua',                   -- Fuzzy findig
     'https://github.com/mason-org/mason.nvim',               -- Lsp downloading plugin
