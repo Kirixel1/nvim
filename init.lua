@@ -17,7 +17,7 @@ vim.opt.scrolloff = 15                                               -- Keep 15 
 vim.opt.sidescrolloff = 15                                           -- Keep 15 columns left/right of cursor
 vim.opt.wrap = false                                                 -- Off line wrapping
 vim.opt.clipboard = 'unnamedplus'                                    -- Make system clipboard the same as Neovim registers for more convenient usage of yank/paste
-vim.opt.netrw_banner = false                                         -- Turn off the banner of the netrw built in explorer
+vim.g.netrw_banner = false                                           -- Turn off the banner of the netrw built in explorer
 
 -- Tabbing / indentation
 vim.opt.shiftwidth = 4                                               -- Number of spaces to use for each step of indenting
@@ -70,9 +70,10 @@ vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>', { desc = 'Open netrw built in N
 vim.keymap.set('n', '<leader>it', '<cmd>InspectTree<CR>', { desc = 'Open tree-sitter inspection buffer' })
 vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>', { desc = 'Show keys in the down-right corner' })
 vim.keymap.set('n', '<leader>O', 'o<esc>kO<Esc>j', { desc = 'Add empty lines' })
+
 vim.keymap.set('n', '<leader>ff', function()
-    require('fzf-lua').files({ cwd = vim.fn.expand('%:p:h') })
-end, { desc = 'FZF find files' })
+    require('fzf-lua').files()
+end, { desc = 'FZF find files in the current directory' })
 
 vim.keymap.set('n', '<leader>fg', function()
     require('fzf-lua').live_grep()
@@ -326,6 +327,9 @@ require('lualine').setup( {
 
 -- Fzf-lua configuration
 require('fzf-lua').setup( {
+    files = {
+        no_ignore = true, -- now I can see all the ignored files in fzf searching
+    },
     lazy = false,
     dependencies = { 'nvim-mini/mini.icons' },
 } )
