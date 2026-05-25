@@ -31,7 +31,6 @@ Leader key = `<Space>`
 | `<leader>it` | `:InspectTree`             | Open tree-sitter inspection buffer  |
 | `<leader>sk` | `:ShowkeysToggle`          | Toggle showkeys widget              |
 | `<leader>O`  | `o<Esc>kO<Esc>j`           | Add empty lines                     |
-| `<leader>e`  | `Snacks.picker.explorer()` | Open file explorer                  |
 | `<leader>ff` | `fzf-lua.files()`          | Find files (FZF)                    |
 | `<leader>fg` | `fzf-lua.live_grep()`      | Live grep (FZF)                     |
 | `<leader>fb` | `fzf-lua.buffers()`        | List buffers (FZF)                  |
