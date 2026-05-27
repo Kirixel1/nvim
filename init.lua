@@ -279,6 +279,7 @@ vim.pack.add( {
 
 -- Setup configuration for plugins
 vim.cmd.colorscheme('gruber-darker')      -- Enable gruber-darker colorscheme
+vim.cmd('packadd nvim.undotree')          -- Enable undotree butil in plugin(only in Neovim 0.12+)
 
 -- Mini.nvim plugin
 require('mini.align').setup()             -- Align module
