@@ -10,7 +10,7 @@ it uses native plugin loading via `vim.pack.add()`.
 So feel free to explore! It's well documented (I think) and self-explanatory,
 so nothing too difficult.
 
-<p align="center">
+
   <h1 align="center">Neovim Sheet Note</h1>
 </p>
 
@@ -393,40 +393,32 @@ Leader key = `<Space>`
 | `Ctrl+wv`  | split window vertically                                 |
 | `Ctrl+ww`  | switch windows                                          |
 | `Ctrl+wq`  | quit a window                                           |
-| `Ctrl+wx`  | exchange current window with next one                   |
 | `Ctrl+w=`  | make all windows equal height & width                   |
-| `Ctrl+wh`  | move cursor to the left window (vertical split)         |
-| `Ctrl+wl`  | move cursor to the right window (vertical split)        |
-| `Ctrl+wj`  | move cursor to the window below (horizontal split)      |
-| `Ctrl+wk`  | move cursor to the window above (horizontal split)      |
-| `Ctrl+wH`  | make current window full height at far left             |
-| `Ctrl+wL`  | make current window full height at far right            |
-| `Ctrl+wJ`  | make current window full width at the very bottom       |
-| `Ctrl+wK`  | make current window full width at the very top          |
 
 ### Different
 
-| Key                 | Description                                    |
-| -----               | -------------                                  |
-| `zf`                | manually define a fold up to motion            |
-| `zd`                | delete fold under the cursor                   |
-| `za`                | toggle fold under the cursor                   |
-| `zo`                | open fold under the cursor                     |
-| `zc`                | close fold under the cursor                    |
-| `zr`                | reduce (open) all folds by one level           |
-| `zm`                | fold more (close) all folds by one level       |
-| `zi`                | toggle folding functionality                   |
-| `]c`                | jump to start of next change                   |
-| `[c`                | jump to start of previous change               |
-| `do`                | obtain (get) difference (from other buffer)    |
-| `dp`                | put difference (to other buffer)               |
-| `:diffthis`         | make current window part of diff               |
-| `:dif`              | update differences                             |
-| `:diffoff`          | switch off diff mode for current window        |
-| `:read[r] file.c`   | inserts the text from the file.c               |
-| `:r !shell_command` | inserts the output info from the shell_command |
-| `:put x`            | put the text from register x after the cursor  |
-| `:reg`              | open register contents history                 |
+| Key                      | Description                                                                                   |
+| -----                    | -------------                                                                                 |
+| `zf`                     | manually define a fold up to motion                                                           |
+| `zd`                     | delete fold under the cursor                                                                  |
+| `za`                     | toggle fold under the cursor                                                                  |
+| `zo`                     | open fold under the cursor                                                                    |
+| `zc`                     | close fold under the cursor                                                                   |
+| `zr`                     | reduce (open) all folds by one level                                                          |
+| `zm`                     | fold more (close) all folds by one level                                                      |
+| `zi`                     | toggle folding functionality                                                                  |
+| `]c`                     | jump to start of next change                                                                  |
+| `[c`                     | jump to start of previous change                                                              |
+| `do`                     | obtain (get) difference (from other buffer)                                                   |
+| `dp`                     | put difference (to other buffer)                                                              |
+| `:diffthis`              | make current window part of diff                                                              |
+| `:dif`                   | update differences                                                                            |
+| `:diffoff`               | switch off diff mode for current window                                                       |
+| `:read[r] file.c`        | inserts the text from the file.c                                                              |
+| `:r !shell_command`      | inserts the output info from the shell_command                                                |
+| `:put x`                 | put the text from register x after the cursor                                                 |
+| `:reg`                   | open register contents history                                                                |
+| `Ctrl+f in command mode` | opens additional buffer when you can continue to type commands with all the motions available |
 
 
 ### Documentation commands(Mostly multi repeat/search and replace/patterns topics)
