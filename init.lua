@@ -13,8 +13,8 @@
 vim.opt.number = true                                                -- Visibility of line numbers
 vim.opt.relativenumber = true                                        -- Relative number style (for jumping with counters)
 vim.opt.cursorline = true                                            -- Highlight current line under the cursor
-vim.opt.scrolloff = 15                                               -- Keep 15 lines above/below cursor
-vim.opt.sidescrolloff = 15                                           -- Keep 15 columns left/right of cursor
+vim.opt.scrolloff = 10                                               -- Keep 15 lines above/below cursor
+vim.opt.sidescrolloff = 10                                           -- Keep 15 columns left/right of cursor
 vim.opt.wrap = false                                                 -- Off line wrapping
 vim.opt.clipboard = 'unnamedplus'                                    -- Make system clipboard the same as Neovim registers for more convenient usage of yank/paste
 vim.g.netrw_banner = false                                           -- Turn off the banner of the netrw built in explorer
@@ -189,7 +189,7 @@ vim.lsp.config['clangd'] = {
 -- Assembly LSP
 vim.lsp.config['asm-lsp'] = {
     cmd = { 'asm-lsp' },
-    filetypes = { 'asm', 's', 'S' }
+    filetypes = { 'asm' }
 }
 
 -- Lua language server
@@ -279,6 +279,7 @@ vim.pack.add( {
     'https://github.com/nvzone/showkeys',                    -- ShowKeys plugin for showing other people what you are pressing
     'https://github.com/Eandrju/cellular-automaton.nvim',    -- Useless but funny plugin, try: CellularAutomaton make_it_rain
     'https://github.com/brenoprata10/nvim-highlight-colors', -- Highlight color codes with relevant colors
+    'https://github.com/NeogitOrg/neogit',                   -- Neovim integration with git
 } )
 
 -- Setup configuration for plugins
@@ -287,12 +288,12 @@ vim.cmd('packadd nvim.undotree')          -- Enable undotree butil in plugin(onl
 
 -- Mini.nvim plugin
 require('mini.align').setup()             -- Align module
--- require('mini.surround').setup()       -- Surround module(s)
--- require('mini.pairs').setup()          -- Autopairs module
 require('mini.comment').setup()           -- Comments module (gcc)
 require('mini.indentscope').setup()       -- Indentscope dashes module
 require('mini.trailspace').setup()        -- Trailspaces module
 require('mini.icons').setup()             -- Icons module
+require('mini.operators').setup()         -- Operators module(mainly for exchanging text regions)
+require('mini.surround').setup()          -- Surround module for surrounding selection with special symbols
 MiniIcons.mock_nvim_web_devicons()        -- Integrates mini.icons with other plugins that can use icons
 -- `HJKL` for moving visual selection (overrides H, L, J in Visual mode)
 -- Mini move module for moving sections of code
@@ -366,11 +367,13 @@ require('nvim-treesitter').setup({
         'html',
         'css',
     },
+
     -- Indent enable = true allowing it to apply correct indentation for complex syntax
     -- (like multiline expressions or specific language blocks) where traditional autoindent might fail
     indent = {
         enable = true
     },
+
 })
 
 -- Show keys configuration (mini widget thing that shows every key that you press for showing or teaching someone else)
@@ -381,6 +384,9 @@ require('showkeys').setup({
         height = 1,
     },
 })
+
+-- Neogit setup
+require('neogit').setup()
 
 -- ==========================================================================================================
 --                                      ADDITIONAL TWEAKS SECTION BEGIN
