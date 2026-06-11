@@ -111,7 +111,7 @@ Leader key = `<Space>`
 
 ### Fun stuff
 So when you're using arrow keys it prints skill issue cause you use vim!
-Arrow keys, mouse and other things are not respectful here >_<
+Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 | Key       | Action                  | Description        |
 | -----     | --------                | -------------      |
