@@ -121,11 +121,6 @@ end, { desc = 'Reindent all the text in a file and delete all trailing spaces (u
 vim.keymap.set('n', '<Esc>', '<Cmd>nohlsearch<CR>', { noremap = true, silent = true, desc = 'Clear search highlight on Escape' })
 
 -- Window management remaps
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move to left window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move to below window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move to above window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move to right window' })
-
 vim.keymap.set('n', '<A-l>', '<cmd>vertical resize -9<CR>', { desc = 'Resize left' })
 vim.keymap.set('n', '<A-j>', '<cmd>resize +6<CR>', { desc = 'Resize down' })
 vim.keymap.set('n', '<A-k>', '<cmd>resize -6<CR>', { desc = 'Resize up' })
