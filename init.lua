@@ -44,9 +44,8 @@ vim.opt.foldlevel = 99                                               -- Keep all
 vim.opt.splitbelow = true                                            -- Horizontal splits open below
 vim.opt.splitright = true                                            -- Vertical splits open to the right
 
--- Behaviour settings
-vim.opt.errorbells = false                                           -- Disable error sounds
-vim.opt.mouse = ''                                                   -- Disable mouse support
+-- Disable error sounds
+vim.opt.errorbells = false
 
 -- Autocompletion options
 vim.opt.complete:append('o')                                         -- Append omnicompletion to default
@@ -66,13 +65,8 @@ vim.opt.pumheight = 5                                                -- Maximum 
 -- Leader mappings
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>', { desc = 'Open netrw built in Neovim file explorer' })
-vim.keymap.set('n', '<leader>it', '<cmd>InspectTree<CR>', { desc = 'Open tree-sitter inspection buffer' })
-vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>', { desc = 'Show keys in the down-right corner' })
+vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>', { desc = 'Show keys in the down-center of the screen' })
 vim.keymap.set('n', '<leader>O', 'o<esc>kO<Esc>j', { desc = 'Add empty lines' })
-vim.keymap.set('n', '<leader>ot', function()
-    vim.cmd('hor term')
-    vim.cmd('normal i')
-end, { desc = 'Opens terminal session in horizontal split below' })
 
 vim.keymap.set('n', '<leader>ff', function()
     require('fzf-lua').files()
@@ -266,17 +260,20 @@ vim.lsp.enable( {'clangd', 'lua_ls', 'asm-lsp' } )
 
 -- Download plugins with built in package manager of Neovim
 vim.pack.add( {
-    'https://github.com/blazkowolf/gruber-darker.nvim',      -- Colorscheme
-    'https://github.com/nvim-mini/mini.nvim',                -- A lot of useful small plugins are setting up 15 lines below
-    'https://github.com/nvim-lualine/lualine.nvim',          -- Lua status line(path,     lsp status, etc)
-    'https://github.com/ThePrimeagen/vim-be-good',           -- Small set of games to practice essential Vim motions
-    'https://github.com/ibhagwan/fzf-lua',                   -- Fuzzy findig
-    'https://github.com/mason-org/mason.nvim',               -- Lsp downloading plugin
-    'https://github.com/nvim-treesitter/nvim-treesitter',    -- Treesitter(more accurate highlighting)
-    'https://github.com/nvzone/showkeys',                    -- ShowKeys plugin for showing other people what you are pressing
-    'https://github.com/Eandrju/cellular-automaton.nvim',    -- Useless but funny plugin, try: CellularAutomaton make_it_rain
-    'https://github.com/brenoprata10/nvim-highlight-colors', -- Highlight color codes with relevant colors
-    'https://github.com/NeogitOrg/neogit',                   -- Neovim integration with git
+    'https://github.com/blazkowolf/gruber-darker.nvim',                   -- Colorscheme
+    'https://github.com/nvim-mini/mini.nvim',                             -- A lot of useful small plugins are setting up 15 lines below
+    'https://github.com/nvim-lualine/lualine.nvim',                       -- Lua status line(path, lsp status, etc)
+    'https://github.com/ThePrimeagen/vim-be-good',                        -- Small set of games to practice essential Vim motions
+    'https://github.com/ibhagwan/fzf-lua',                                -- Fuzzy findig
+    'https://github.com/mason-org/mason.nvim',                            -- Lsp downloading plugin
+    'https://github.com/nvim-treesitter/nvim-treesitter',                 -- Treesitter(more accurate highlighting)
+    'https://github.com/nvzone/showkeys',                                 -- ShowKeys plugin for showing other people what you are pressing
+    'https://github.com/Eandrju/cellular-automaton.nvim',                 -- Useless but funny plugin, try: CellularAutomaton make_it_rain
+    'https://github.com/brenoprata10/nvim-highlight-colors',              -- Highlight color codes with relevant colors
+    'https://github.com/NeogitOrg/neogit',                                -- Neovim integration with git
+    'https://github.com/shushtain/nvim-treesitter-incremental-selection', -- Return back incremental selection function from treesitter plugin
+    'https://github.com/ej-shafran/compile-mode.nvim',                    -- Compilation mode plugin like in Emacs
+    'https://github.com/nvim-lua/plenary.nvim',                           -- That's dependency for compilation mode plugin and some others, like Neogit also
 } )
 
 -- Setup configuration for plugins
@@ -377,6 +374,12 @@ require('nvim-treesitter').setup({
     },
 
 })
+
+-- Incremental selection setup
+local tsis = require('nvim-treesitter-incremental-selection')
+vim.keymap.set('n', '<leader>o', tsis.init_selection)
+vim.keymap.set('v', '<leader>i', tsis.increment_node)
+vim.keymap.set('v', '<leader>d', tsis.decrement_node)
 
 -- Show keys configuration (mini widget thing that shows every key that you press for showing or teaching someone else)
 require('showkeys').setup({
