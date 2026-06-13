@@ -416,8 +416,8 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `:put x`                 | put the text from register x after the cursor                                                                                     |
 | `:reg`                   | open register contents history                                                                                                    |
 | `Ctrl+f in command mode` | opens additional buffer when you can continue to type commands with all the motions available                                     |
-| `ctrl+]`                 | jump to the definition of the keyword under the cursor. same as ":tag {name}", where {name} is the keyword under or after cursor. |
-| `ctrl+t`                 | jump to count older entry in the tag stack                                                                                        |
+| `Ctrl+]`                 | jump to the definition of the keyword under the cursor. same as ":tag {name}", where {name} is the keyword under or after cursor. |
+| `Ctrl+T`                 | jump to count older entry in the tag stack                                                                                        |
 | `g]`                     | like ctrl-], but use ":tselect" instead of ":tag"                                                                                 |
 
 
