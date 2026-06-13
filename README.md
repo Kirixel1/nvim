@@ -86,18 +86,13 @@ Leader key = `<Space>`
 
 | Key          | Action                            | Description                     |
 | -----        | --------                          | -------------                   |
-| `gd`         | `vim.lsp.buf.definition`          | Go to definition                |
-| `gr`         | `vim.lsp.buf.references`          | Go to references                |
-| `gI`         | `vim.lsp.buf.implementation`      | Go to implementation            |
 | `<leader>rn` | `vim.lsp.buf.rename`              | Rename symbol                   |
 | `K`          | `vim.lsp.buf.hover()`             | Hover documentation             |
+| `<leader>d`  | `vim.diagnostic.open_float`       | Open diagnostic float           |
 | `[d`         | `vim.diagnostic.jump({count=-1})` | Previous diagnostic             |
 | `]d`         | `vim.diagnostic.jump({count=1})`  | Next diagnostic                 |
-| `<leader>d`  | `vim.diagnostic.open_float`       | Open diagnostic float           |
-| `gK`         | `Toggle virtual_lines`            | Toggle diagnostic virtual lines |
-| `<leader>D`  | `vim.lsp.buf.type_definition`     | Type definition                 |
-| `gD`         | `vim.lsp.buf.declaration`         | Go to declaration               |
 | `<leader>q`  | `vim.diagnostic.setqflist`        | Open diagnostic quickfix        |
+| `gK`         | `Toggle virtual_lines`            | Toggle diagnostic virtual lines |
 
 ### Mini.nvim Mappings
 
