@@ -21,17 +21,13 @@ Leader key = `<Space>`
 | `<leader>pv` | `:Ex`                 | Open netrw file explorer           |
 | `<leader>sk` | `:ShowkeysToggle`     | Toggle showkeys widget             |
 | `<leader>O`  | `o<Esc>kO<Esc>j`      | Add empty lines                    |
-| `<leader>ff` | `fzf-lua.files()`     | Find files (FZF)                   |
-| `<leader>fg` | `fzf-lua.live_grep()` | Live grep (FZF)                    |
-| `<leader>fb` | `fzf-lua.buffers()`   | List buffers (FZF)                 |
-| `<leader>fh` | `fzf-lua.help_tags()` | Search help tags (FZF)             |
 | `<leader>o`  | `init_selection`      | Initialize incremental selection   |
 | `<leader>i`  | `increment_node`      | Incrementing initialized selection |
 | `<leader>d`  | `decrement_node`      | Decrementing initialized selection |
-| `<leader>nt` | `tabnext`             | Next tab                           |
-| `<leader>pt` | `tabprevious`         | Previous tab                       |
-| `<leader>ct` | `tabclose`            | Close tab                          |
-| `<leader>ot` | `tabnew`              | Opens new tab                      |
+| `<leader>tn` | `tabnext`             | Next tab                           |
+| `<leader>tp` | `tabprevious`         | Previous tab                       |
+| `<leader>tc` | `tabclose`            | Close tab                          |
+| `<leader>to` | `tabnew`              | Opens new tab                      |
 
 ### Buffer Switching
 
