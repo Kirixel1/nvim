@@ -28,6 +28,10 @@ Leader key = `<Space>`
 | `<leader>o`  | `init_selection`      | Initialize incremental selection   |
 | `<leader>i`  | `increment_node`      | Incrementing initialized selection |
 | `<leader>d`  | `decrement_node`      | Decrementing initialized selection |
+| `<leader>nt` | `tabnext`             | Next tab                           |
+| `<leader>pt` | `tabprevious`         | Previous tab                       |
+| `<leader>ct` | `tabclose`            | Close tab                          |
+| `<leader>ot` | `tabnew`              | Opens new tab                      |
 
 ### Buffer Switching
 
