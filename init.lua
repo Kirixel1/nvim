@@ -49,9 +49,9 @@ vim.opt.errorbells     = false
 
 -- Autocompletion options
 vim.opt.complete:append('o')                                                          -- Append omnicompletion to default
-vim.opt.completeopt  = { 'menuone', 'noselect', 'popup', 'fuzzy' }                    -- Some minor completeopt settings (see ':help completeopt')
-vim.opt.pumborder    = 'single'                                                       -- Single line autocompletion border box
-vim.opt.pumheight    = 5                                                              -- Maximum elements of autocompletion
+vim.opt.completeopt    = { 'menuone', 'noselect', 'popup', 'fuzzy' }                  -- Some minor completeopt settings (see ':help completeopt')
+vim.opt.pumborder      = 'single'                                                     -- Single line autocompletion border box
+vim.opt.pumheight      = 5                                                            -- Maximum elements of autocompletion
 
 -- ==========================================================================================================
 --                                        OPTIONS SECTION END
@@ -64,10 +64,10 @@ vim.opt.pumheight    = 5                                                        
 
 -- Leader mappings
 vim.g.mapleader = ' '
-vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>',                                 { desc = 'Open netrw built in Neovim file explorer' })
-vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>',                     { desc = 'Show keys in the down-center of the screen' })
-vim.keymap.set('n', '<leader>O',  'o<esc>kO<Esc>j',                              { desc = 'Add empty lines' })
-vim.keymap.set('n', '<leader>cm', '<cmd>Compile<CR>',                            { desc = 'Enters compilation mode' })
+vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>',             { desc = 'Open netrw built in Neovim file explorer' })
+vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>', { desc = 'Show keys in the down-center of the screen' })
+vim.keymap.set('n', '<leader>O',  'o<esc>kO<Esc>j',          { desc = 'Add empty lines' })
+vim.keymap.set('n', '<leader>cm', '<cmd>Compile<CR>',        { desc = 'Enters compilation mode' })
 
 -- Tabs keymaps
 vim.keymap.set('n', '<leader>tn', '<cmd>tabnext<CR>',     { desc = 'Next tab' })
@@ -94,6 +94,7 @@ vim.keymap.set('n', '<C-Enter>', 'o<Esc>', { desc = 'New line below without swit
 vim.keymap.set('n', '<C-Backspace>', 'O<Esc>', { desc = 'New line above without switchin to insert mode' })
 vim.keymap.set('n', '<C-,>', 'A,<Esc>', { desc = 'Comma at the end of the line' })
 vim.keymap.set('n', '<C-;>', 'A;<Esc>', { desc = 'Dot and comma at the end of the line' })
+vim.keymap.set('n', '<Esc>', '<Cmd>nohlsearch<CR>', { noremap = true, silent = true, desc = 'Clear search highlight on Escape' })
 
 vim.keymap.set('n', '=wb', function()
     local view = vim.fn.winsaveview()
@@ -101,8 +102,6 @@ vim.keymap.set('n', '=wb', function()
     vim.cmd('lua MiniTrailspace.trim()')
     vim.fn.winrestview(view)
 end, { desc = 'Reindent all the text in a file and delete all trailing spaces (unnecessary spaces)' })
-
-vim.keymap.set('n', '<Esc>', '<Cmd>nohlsearch<CR>', { noremap = true, silent = true, desc = 'Clear search highlight on Escape' })
 
 -- Window management remaps
 vim.keymap.set('n', '<A-l>', '<cmd>vertical resize -9<CR>', { desc = 'Resize left' })
