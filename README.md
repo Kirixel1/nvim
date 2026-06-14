@@ -82,18 +82,6 @@ Leader key = `<Space>`
 | `<Esc>`             | `:nohlsearch`                    | Clear search highlight                  |
 | `<Esc><Esc>` (term) | `<C-\><C-n>`                     | Terminal: switch to normal mode         |
 
-### LSP Keymaps
-
-| Key          | Action                            | Description                     |
-| -----        | --------                          | -------------                   |
-| `<leader>rn` | `vim.lsp.buf.rename`              | Rename symbol                   |
-| `K`          | `vim.lsp.buf.hover()`             | Hover documentation             |
-| `<leader>d`  | `vim.diagnostic.open_float`       | Open diagnostic float           |
-| `[d`         | `vim.diagnostic.jump({count=-1})` | Previous diagnostic             |
-| `]d`         | `vim.diagnostic.jump({count=1})`  | Next diagnostic                 |
-| `<leader>q`  | `vim.diagnostic.setqflist`        | Open diagnostic quickfix        |
-| `gK`         | `Toggle virtual_lines`            | Toggle diagnostic virtual lines |
-
 ### Mini.nvim Mappings
 
 | Key                       | Mode   | Action                           |
