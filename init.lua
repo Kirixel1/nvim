@@ -104,7 +104,6 @@ vim.pack.add( {
     'https://github.com/nvim-mini/mini.nvim',                             -- A lot of useful small plugins are setting up 15 lines below
     'https://github.com/nvim-lualine/lualine.nvim',                       -- Lua status line(path, lsp status, etc)
     'https://github.com/ThePrimeagen/vim-be-good',                        -- Small set of games to practice essential Vim motions
-    'https://github.com/mason-org/mason.nvim',                            -- Lsp downloading plugin
     'https://github.com/nvim-treesitter/nvim-treesitter',                 -- Treesitter(more accurate highlighting)
     'https://github.com/nvzone/showkeys',                                 -- ShowKeys plugin for showing other people what you are pressing
     'https://github.com/Eandrju/cellular-automaton.nvim',                 -- Useless but funny plugin, try: CellularAutomaton make_it_rain
@@ -166,7 +165,6 @@ require('lualine').setup( {
 
 require('neogit').setup()
 require('nvim-highlight-colors').setup()
-require('mason').setup()
 require('nvim-treesitter').setup({
     sync_install = false, -- Disable sync install of parsers
     auto_install = true, -- Automatically installs missing Treesitter language parsers when you open a file for which the parser is not yet installed
