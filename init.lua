@@ -93,14 +93,6 @@ vim.api.nvim_create_autocmd('BufReadPost', {
     end,
 })
 
--- Clear autoformatting of comments on new lines
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = '*',
-    callback = function()
-        vim.opt_local.formatoptions:remove({ 'c', 'r', 'o' })
-    end,
-})
-
 -- Download plugins with built in package manager of Neovim
 vim.pack.add( {
     'https://github.com/blazkowolf/gruber-darker.nvim',                   -- Colorscheme
