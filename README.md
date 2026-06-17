@@ -461,7 +461,8 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 # Multicursor
 
-<summary>Main keymaps</summary>
+<details>
+    <summary>Main keymaps</summary>
 
 | Key     | Description                                                                               |
 | ---     | ---                                                                                       |
@@ -505,7 +506,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `u`     | Undo changes                                                                              |
 | `<C-r>` | Redo changes                                                                              |
 
-<summary>Insert, Append and Change mode</summary>
+</details>
+
+<details>
+    <summary>Insert, Append and Change mode</summary>
 
 | Key         | Description                                                 |
 | ---         | ---                                                         |
@@ -529,7 +533,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `<C-BS>`    | Deletes one word before the selections                      |
 | `<C-u>`     | Deletes from the start of selections till the start of line |
 
-<summary>Extend mode</summary>
+</details>
+
+<details>
+    <summary>Extend mode</summary>
 
 Once you enter the Extend mode, you can expand or shrink your selections using Vim motions or Treesitter nodes.
 At first, the left side of the selections stays put, and selections get extended from the right side.
@@ -555,5 +562,4 @@ But you can change which side of selections stay put by pressing `o`.
 | `$`     | `[count]` to end of line                                      |
 | `^`     | To the first non-blank character of the line                  |
 
-
-
+</details>
