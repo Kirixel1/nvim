@@ -34,6 +34,7 @@ vim.opt.complete:append('o')                                                    
 vim.opt.completeopt    = { 'menuone', 'noselect', 'popup', 'fuzzy' }                  -- Some minor completeopt settings (see ':help completeopt')
 vim.opt.pumborder      = 'single'                                                     -- Single line autocompletion border box
 vim.opt.pumheight      = 5                                                            -- Maximum elements of autocompletion
+vim.opt.shell          = 'fish'                                                       -- Set default shell to fish instead of bash
 
 -- Key maps
 vim.g.mapleader = ' '
@@ -216,7 +217,7 @@ vim.g.compile_mode = {
     recompile_no_fail = false,
     ask_about_save = true,
     ask_to_interrupt = true,
-    buffer_name = '*compilation*',
+    buffer_name = 'compilation',
     time_format = '%a %b %e %H:%M:%S',
     hidden_output = {},
     environment = nil,
