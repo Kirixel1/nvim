@@ -7,7 +7,9 @@ It's well documented and self-explanatory.
 
 Some of the keymaps taked from [vim.rtorr.com](https://vim.rtorr.com/) and also constantly updating them when I explore new motions/commands with `:h/:help` or on the internet.
 
-# Keymaps Reference
+<p align="center">
+  <h1 align="center">keymaps reference</h1>
+</p>
 
 ## Leader Keymaps
 
