@@ -309,7 +309,6 @@ Leader key = `<Space>`
 | `~`  | switch case                           |
 | `u`  | change marked text to lowercase       |
 | `U`  | change marked text to uppercase       |
-| `gv` | reselect the previously selected text |
 
 </details>
 
