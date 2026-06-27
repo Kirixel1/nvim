@@ -26,8 +26,6 @@ Leader key = `<Space>`
 | `<leader>o`  | `init_selection`                     | Initialize incremental selection   |
 | `<leader>i`  | `increment_node`                     | Incrementing initialized selection |
 | `<leader>d`  | `decrement_node`                     | Decrementing initialized selection |
-| `<leader>tn` | `tabnext`                            | Next tab                           |
-| `<leader>tp` | `tabprevious`                        | Previous tab                       |
 | `<leader>tc` | `tabclose`                           | Close tab                          |
 | `<leader>to` | `tabnew`                             | Opens new tab                      |
 | `<leader>ts` | `<cmd>lua MiniTrailspace.trim()<CR>` | Trim redundant spaces              |
@@ -205,8 +203,6 @@ Leader key = `<Space>`
 | `Ctrl+y`      | move screen up one line (without moving cursor)                       |
 | `Ctrl+b`      | move screen up one page (cursor to last line)                         |
 | `Ctrl+f`      | move screen down one page (cursor to first line)                      |
-| `Ctrl+d`      | move cursor and screen down 1/2 page                                  |
-| `Ctrl+u`      | move cursor and screen up 1/2 page                                    |
 | `Ctrl+i`      | go to newer cursor position in jump list                              |
 | `Ctrl+o`      | go to older cursor position in jump list                              |
 
@@ -414,21 +410,6 @@ Leader key = `<Space>`
 
 </details>
 
-## Search in multiple files
-
-<details>
-    <summary>Click to see mappings</summary>
-
-| Key                   | Description                                  |
-| -----                 | -------------                                |
-| `:vim[grep] /pat/ {}` | search for pattern in multiple files         |
-| `:cn`                 | jump to the next match                       |
-| `:cp`                 | jump to the previous match                   |
-| `:cope`               | open a window containing the list of matches |
-| `:ccl`                | close the quickfix window                    |
-
-</details>
-
 ## Tabs
 
 <details>
@@ -445,32 +426,6 @@ Leader key = `<Space>`
 | `:tabc`          | close the current tab and all its windows             |
 | `:tabo`          | close all tabs except for the current one             |
 | `:tabdo command` | run the command on all tabs                           |
-
-</details>
-
-## Working with multiple files
-
-<details>
-    <summary>Click to see mappings</summary>
-
-| Key        | Description                                             |
-| -----      | -------------                                           |
-| `:e file`  | edit a file in a new buffer                             |
-| `:bn`      | go to the next buffer                                   |
-| `:bp`      | go to the previous buffer                               |
-| `:bd`      | delete a buffer (close a file)                          |
-| `:b #`     | go to a buffer by index #                               |
-| `:b file`  | go to a buffer by file                                  |
-| `:ls`      | list all open buffers                                   |
-| `:sp file` | open a file in a new buffer and split window            |
-| `:vs file` | open a file in a new buffer and vertically split window |
-| `:vert ba` | edit all buffers as vertical windows                    |
-| `:tab ba`  | edit all buffers as tabs                                |
-| `Ctrl+ws`  | split window                                            |
-| `Ctrl+wv`  | split window vertically                                 |
-| `Ctrl+ww`  | switch windows                                          |
-| `Ctrl+wq`  | quit a window                                           |
-| `Ctrl+w=`  | make all windows equal height & width                   |
 
 </details>
 
