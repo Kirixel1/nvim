@@ -182,6 +182,7 @@ require('nvim-treesitter').setup({
         'markdown_inline',
         'html',
         'css',
+        'bash',
     },
 
     -- Indent enable = true allowing it to apply correct indentation for complex syntax
